@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleBS.css">
+  </head>
+  <body onload="checkLoggedin()">
+
+        <!------------------------------------- header Start -------------------------------------------->
+
+        <div class="container">
+          <div class="desk-header row my-1 text-wrap text-lg-start align-content-between justify-content-center align-items-center g-1">
+            <div class="col-3 col-md-3">
+              <img src="images/logo.png" alt="" width="130" />
+            </div>
+            <div class="col-3 col-md-6  header-search">
+              <form name="searchForm" action="search1.html">
+                <div class="input-group roundedw w-75 m-auto">
+                  <input type="search" class="form-control rounded m-0" placeholder="Search" 
+                    aria-label="Search" aria-describedby="search-addon" name="search" id="search" oninput="ValidateSearch(value)" />
+                  <span  onclick="searchFor()" class="rounded-1" id="search-addon">
+                  <i class="fas fa-search"></i>
+                  </span>
+                </div>
+              </form>
+              <div id="searchErrorDiv"></div>
+            </div>
+            <div class="col-3 col-md-3 rounded-1 text-end header-cart">
+              <a href="cart.html">
+              <button type="button" class="btn btn-dark position-relative">
+                <i class="fa-solid fa-bag-shopping fa-2x"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-items">
+                  0
+                </span>
+              </button>
+            </a>
+            </div>
+          </div>
+          </div>
+    
+        <!------------------------------------- mobile header Start -------------------------------------------->
+    
+         <div class="mobile-header d-block"> 
+        <div class="row w-100 align-items-center pt-2 pb-2">
+            <div class="col-1 ms-3">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <i class="fa-solid fa-bars"></i>
+              </button>
+            </div>
+            <div class="col-3">
+              <img src="images/logo.png" alt="" width="100" />
+            </div>
+            <div class="col-3">
+            
+            </div>
+            <div class="col-4 rounded-1 text-end header-cart align-items-center">
+              <a href="wishlist.html">
+                <i class="fa-regular fa-heart"></i>    
+            </a>
+              <a href="cart.html">
+    
+              <button type="button" class="btn btn-dark border-0 position-relative">
+                <i class="fa-solid fa-bag-shopping fa-2x"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-items">
+                  0
+                </span>
+              </button>
+            </a>
+            </div>
+          </div>
+    
+         <!--- <div class="row w-100 p-0 m-0 mb-1">
+            <div class="col-12 header-search p-0 m-0">
+              <form name="searchForm" action="search1.html">
+                <div class="input-group rounded m-auto w-100 p-3 pt-0 pb-0">
+                  <input type="search" class="form-control rounded m-0" placeholder="Search" 
+                    aria-label="Search" aria-describedby="search-addon" name="search" id="search" oninput="ValidateSearch(value)" />
+                  <span  onclick="searchFor()" class="rounded-1" id="search-addon">
+                  <i class="fas fa-search"></i>
+                  </span>
+                </div>
+              </form>
+              <div id="searchErrorDiv"></div>
+            </div>
+          </div>-->
+          
+        </div>
+          <!------------------------------------- header end -------------------------------------------->
+          <!------------------------------------- Navbar Start -------------------------------------------->
+    
+          <div class="container-fluid  p-0">
+            <nav class="navbar navbar-expand-lg bg-dark navbar-dark w-100 m-0 p-0">
+              <div class="container-lg">
+                <!--  <a class="navbar-brand" href="index.html">Furniture</a>-->
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav m-auto mb-2 mb-lg-0 w-100 justify-content-evenly">
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">categories</a>
+                      <ul class="dropdown-menu"></ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="wishlist.html">Wishlist</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+      
+                    <li class="nav-item menu-not-logged "><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item menu-not-logged "><a class="nav-link" href="registration.html">Registration</a></li>
+                    <li class="nav-item menu-logged "><a class="nav-link" href="registration.html" onclick="logout()">Logout</a></li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        
+    <!------------------------------------- Navbar End -------------------------------------------->
+     <!------------------------------------- Page title start -------------------------------------------->
+    <div class="page-title-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="text-center text-white fw-bold"></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!------------------------------------- Page title end -------------------------------------------->
+    <!------------------------------------- Breadcrumb start -------------------------------------------->
+
+    <nav class="bg-light" aria-label="breadcrumb">
+      <div class="container">
+        <ol class="breadcrumb p-2">
+          <li class="breadcrumb-item fs-6"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active fs-6" aria-current="page"><a></a></li>
+        </ol>
+      </div>
+    </nav>
+    <!------------------------------------- Breadcrumb end -------------------------------------------->
+    <!------------------------------------- about start -------------------------------------------->
+
+    <div class="aboutus-secktion paddingTB60">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h1 class="strong">Who we are ? </h1>
+            
+          </div>
+          <div class="col-md-8 p-3" style="border: 1px rgb(218, 216, 216) solid;border-radius:20px ;">
+           
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              convallis egestas rhoncus. Donec facilisis fermentum sem, ac
+              sit amet. Nulla convallis egestas rhoncus. convallis egestas rhoncus. Donec facilisis fermentum sem, ac
+              sit amet. Nulla convallis egestas rhoncus. convallis egestas rhoncus. Donec facilisis fermentum sem, ac
+              sit amet. Nulla convallis egestas rhoncus.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container team-sektion paddingTB60 mt-5">
+      <div class="row">
+        <div class="site-heading text-center">
+          <h3>Our Team</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt <br />
+            ut labore et dolore magna aliqua. Ut enim ad minim
+          </p>
+          <!-- <div class="border"></div> -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 team-box hov">
+          <div class="team-img thumbnail">
+            <img
+              src="https://media.istockphoto.com/vectors/business-man-cartoon-character-in-formal-suit-vector-id1072694846?k=20&m=1072694846&s=170667a&w=0&h=ZU2MgmyQXKfu-HStZlyqqduto9RIBVWmC7Vmq05pt2k="
+              class="img-fluid"
+              alt="Responsive image"
+              style="height: 200px;"
+            />
+            <div class="team-content">
+              <h3>HISHAM</h3>
+              <div class="border-team"></div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                convallis egestas rhoncus. Donec facilisis fermentum sem, ac
+                viverra ante luctus vel. Donec vel mauris quam.
+              </p>
+              <div class="social-icons">
+                <a href="https://www.facebook.com/">
+                  <i class="fa-brands fa-square-facebook fa-3x social"></i>
+                </a>
+                <a href="https://twitter.com/">
+                  <i class="fa-brands fa-square-twitter fa-3x social"></i>
+                </a>
+                <a href="https://plus.google.com/">
+                  <i class="fa-brands fa-square-google-plus fa-3x social"></i>
+                </a>
+                <a href="mailto:bootsnipp@gmail.com">
+                  <i id="social-em" class="fa fa-envelope-square fa-3x social"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 team-box">
+          <div class="team-img thumbnail">
+            <img
+              src="https://i.pinimg.com/236x/77/27/94/77279473326ee1f5ce8c6f2239fc870e.jpg"
+              style="height: 200px"
+            />
+            <div class="team-content">
+              <h3>FATMA</h3>
+              <!-- <div class="border-team"></div> -->
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                convallis egestas rhoncus. Donec facilisis fermentum sem, ac
+                viverra ante luctus vel. Donec vel mauris quam.
+              </p>
+              <div class="social-icons">
+                <a href="https://www.facebook.com/">
+                  <i class="fa-brands fa-square-facebook fa-3x social"></i>
+                </a>
+                <a href="https://twitter.com/">
+                  <i class="fa-brands fa-square-twitter fa-3x social"></i>
+                </a>
+                <a href="https://plus.google.com/">
+                  <i class="fa-brands fa-square-google-plus fa-3x social"></i>
+                </a>
+                <a href="mailto:bootsnipp@gmail.com">
+                  <i id="social-em" class="fa fa-envelope-square fa-3x social"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 team-box">
+          <div class="team-img thumbnail">
+            <img
+              src="https://thumbs.dreamstime.com/b/charming-bearded-business-man-character-cartoon-modern-flat-design-charming-bearded-business-man-character-cartoon-modern-flat-130073628.jpg"
+              class="img-fluid"
+              alt="Responsive image"
+              style="height: 200px"
+            />
+            <div class="team-content">
+              <h3>SALEM</h3>
+              <div class="border-team"></div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                convallis egestas rhoncus. Donec facilisis fermentum sem, ac
+                viverra ante luctus vel. Donec vel mauris quam.
+              </p>
+              <div class="social-icons">
+                <a href="https://www.facebook.com/">
+                  <i class="fa-brands fa-square-facebook fa-3x social"></i>
+                </a>
+                <a href="https://twitter.com/">
+                  <i class="fa-brands fa-square-twitter fa-3x social"></i>
+                </a>
+                <a href="https://plus.google.com/">
+                  <i class="fa-brands fa-square-google-plus fa-3x social"></i>
+                </a>
+                <a href="mailto:bootsnipp@gmail.com">
+                  <i id="social-em" class="fa fa-envelope-square fa-3x social"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div><br/>
+        <div class="col-md-4 team-box" style="margin-top: 20px;">
+          <div class="team-img thumbnail">
+            <img
+              src="https://thumbs.dreamstime.com/b/happy-smiling-man-shows-thumbs-up-gesture-symbol-sign-like-cool-agree-approve-bearded-dark-haired-guy-blue-eyes-shirt-140806698.jpg"
+              class="img-fluid"
+              alt="Responsive image"
+              style="height: 188px"
+            />
+            <div class="team-content">
+              <h3>ABULRAHMAN</h3>
+              <div class="border-team"></div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                convallis egestas rhoncus. Donec facilisis fermentum sem, ac
+                viverra ante luctus vel. Donec vel mauris quam.
+              </p>
+              <div class="social-icons">
+                <a href="https://www.facebook.com/">
+                  <i class="fa-brands fa-square-facebook fa-3x social"></i>
+                </a>
+                <a href="https://twitter.com/">
+                  <i class="fa-brands fa-square-twitter fa-3x social"></i>
+                </a>
+                <a href="https://plus.google.com/">
+                  <i class="fa-brands fa-square-google-plus fa-3x social"></i>
+                </a>
+                <a href="mailto:bootsnipp@gmail.com">
+                  <i id="social-em" class="fa fa-envelope-square fa-3x social"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 team-box mt-2">
+          <div class="team-img thumbnail ">
+            <img
+              src="https://thumbs.dreamstime.com/b/character-office-worker-man-business-suit-vector-illustration-cartoon-style-isolated-129157159.jpg"
+              class="img-fluid"
+              alt="Responsive image"
+              style="height: 200px"
+            />
+            <div class="team-content">
+              <h3>IBRAHEM</h3>
+              <div class="border-team"></div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                convallis egestas rhoncus. Donec facilisis fermentum sem, ac
+                viverra ante luctus vel. Donec vel mauris quam.
+              </p>
+              <div class="social-icons">
+                <a href="https://www.facebook.com/">
+                  <i class="fa-brands fa-square-facebook fa-3x social"></i>
+                </a>
+                <a href="https://twitter.com/">
+                  <i class="fa-brands fa-square-twitter fa-3x social"></i>
+                </a>
+                <a href="https://plus.google.com/">
+                  <i class="fa-brands fa-square-google-plus fa-3x social"></i>
+                </a>
+                <a href="mailto:bootsnipp@gmail.com">
+                  <i id="social-em" class="fa fa-envelope-square fa-3x social"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="contact-us">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="section-heading">
+                      <h4>Contact Us</h4>
+                      <div class="line-dec"></div>
+                      <p>Nunc posuere non quam at pharetra. Mauris tincidunt purus vel ultrices malesuada. Integer euismod erat ut nulla ultrices, ut auctor eros feugiat.</p>
+                      <div class="pop-button">
+                        <button type="submit" id="form-submit" class="btn">Send us a message</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-6 col-md-offset-3">
+                  <div class="pop">
+                      <span class="close">✖</span>
+                      <form id="contact" action="#" method="post">
+                          <div class="row">
+                              <div class="col-md-12">
+                                <fieldset>
+                                  <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required>
+                                </fieldset>
+                              </div>
+                              <div class="col-md-12">
+                                <fieldset>
+                                  <input name="email" type="email" class="form-control" id="email" placeholder="Your email..." required>
+                                </fieldset>
+                              </div>
+                              <div class="col-md-12">
+                                <fieldset>
+                                  <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required></textarea>
+                                </fieldset>
+                              </div>
+                              <div class="col-md-12">
+                                <fieldset>
+                                  <span class="send"><i class="fa-solid fa-paper-plane"></i></span>
+                                  <!-- <button type="submit" id="form-submit" class="btn"></button> -->
+                                </fieldset>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+    <!-- <div style="height: 100px"></div> -->
+<div class="d-flex w-100" >
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5930197.824622803!2d30.86510002520783!3d26.89972788377772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sar!2seg!4v1663503685812!5m2!1sar!2seg" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+  </div>
+
+     <!------------------------------------- Footer Start -------------------------------------------->
+     <footer class="footer footer-container text-start">
+      <div class="container p-4">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">About Us</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse totam debitis illo, iure ad non
+              eaque veritatis nostrum assumenda facilis vel voluptates, a laudantium voluptate maiores nulla
+              perferendis ratione id.
+            </p>
+          </div>
+          <div class="col-lg-5 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-0">categories</h5>
+            <ul id="footerCatregory" class="list-unstyled pt-1">
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+            <ul class="list-unstyled mb-0">
+              <li class="pb-0"><a class="text-dark" href="index.html">Home</a></li>
+              <li class="pb-0"><a class="text-dark" href="about.html">About</a></li>
+              <li class="pb-0"><a class="text-dark" href="categories.html">Categories</a></li>
+              <li class="pb-0"><a class="text-dark" href="products.html">Products</a></li>
+              <li class="pb-0"><a class="text-dark" href="wishlist.html">Wishlist</a></li>
+              <li class="pb-0"><a class="text-dark" href="cart.html">Cart</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2022 Copyright:
+        <a class="text-dark" href="about.html">ITI Project</a>
+      </div>
+    </footer>
+    <!------------------------------------- Footer End -------------------------------------------->
+
+    <!--<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="JS/main.js"></script>
+<script src="JS/cookies.js"></script>
+</body>
+</html>

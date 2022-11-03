@@ -1,0 +1,149 @@
+* {
+    font-family: cursive;
+}
+
+.bg-dark {
+    background-color: #1c1a19 !important;
+
+}
+
+input {
+    border: 1px solid #cecece;
+    line-height: 2em;
+    border-radius: 5px;
+}
+
+.header-search span {
+    /* display: inline; */
+    /* border-radius: 5px; */
+    border: 1px solid #cecece;
+    line-height: 2em;
+    padding: 2px 12px;
+    margin-left: 5px !important;
+    background-color: #9c867b;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+.back-ground-wight {
+    background-color: white !important;
+}
+
+.back-ground {
+    background-color: #9c867b;
+}
+
+.w {
+    color: white;
+}
+
+.b {
+    border: 5px solid #9c867b;
+}
+
+.btn-outline-success {
+    --bs-btn-color: #9c867b;
+    --bs-btn-border-color: #9c867b;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #9c867b;
+    --bs-btn-hover-border-color: #9c867b;
+    --bs-btn-focus-shadow-rgb: 25, 135, 84;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #9c867b;
+    --bs-btn-active-border-color: #9c867b;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #9c867b;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #9c867b;
+    --bs-gradient: none;
+}
+
+.footer {
+    background-color: #161313;
+    color: #fff;
+}
+
+.footer a {
+    color: #fff !important;
+}
+
+.footer-container h3:after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background-color: #9c867b;
+    display: block;
+    margin-top: 16px;
+}
+
+/*
+.cart-icon i {
+    font-size: 29px;
+    color: #fff;
+}
+
+.cart-icon a {
+    line-height: 2em;
+}
+
+.cart-icon {
+    width: 50px;
+    height: 2em;
+    text-align: center;
+    background-color: #9c867b;
+    /* box-shadow: 0 10px 20px rgb(0 0 0 / 7%), 0 6px 6px rgb(0 0 0 / 0%) !important; */
+/*
+}
+
+span.cart-items {
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 50%;
+    /* top: 9px;
+    left: 40px; */
+/*   background-color: #ff0000 !important;
+    font-size: 15px;
+    animation-timing-function: ease-in;
+    /* display: block;
+    position: absolute; */
+/*   color: #fff;
+}
+*/
+.loginHeader h3 {
+    font-size: 28px;
+}
+
+.display-block {
+
+    display: block;
+}
+
+/* //////////////////////////////  admin login  ////////////////////////////////////// */
+
+#dashboard {
+    color: white;
+    margin-top: 20px;
+    margin-left: 35px;
+
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    background-color: #9c867b;
+    /* background-color: var(--main-color); */
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    font-size: larger;
+}
+
+
+.bg-dark {
+    background-color: #201b18 !important;
+}

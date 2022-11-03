@@ -1,0 +1,11 @@
+section.adminLogin {
+    background-color: #574a4a;
+    width: 100%;
+    height: 100vh;
+
+    padding-top: 150px;
+}
+
+section.adminLogin .loginContainer input[type="submit"] {
+    background-color: #574a4a !important
+}

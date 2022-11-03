@@ -1,0 +1,93 @@
+body {
+    box-sizing: border-box;
+    position: relative;
+    --main-color: rgb(71, 64, 64);
+}
+.main-color{
+    background-color: var(--main-color);
+}
+
+h1 {
+    text-align: center;
+}
+
+/* ************************* header ********************* */
+
+.fa-sharp,
+.fa-brands {
+    font-size: 25px;
+}
+
+.fa-trash {
+    color: rgb(220, 26, 26);
+}
+
+.fa-pen-to-square,
+.fa-phone {
+    color: rgb(33, 174, 33);
+}
+
+.fa-sharp {
+    font-size: 25px;
+}
+
+/* ************************Aside****************** */
+#side-nav{
+    width: 15%;
+}
+#container-section{
+    width: 85%;
+    left: 15% ;
+}
+#adminSideBar {
+    height: 100%;
+}
+
+.side-item {
+    text-align: center;
+    height: 50px;
+    font-size: larger;
+    transition: all 1s;
+}
+.side-item a{
+    line-height: 50px;
+}
+
+.side-item:hover {
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+    background-color: rgb(131, 130, 130);
+}
+
+table,
+th,
+td {
+    text-align: center;
+}
+
+/* **************** add product */
+
+
+::-webkit-input-placeholder {
+    /* Edge */
+    text-align: center;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    text-align: center;
+
+}
+
+::placeholder {
+    text-align: center;
+
+}
+
+p.error {
+    color: red;
+    font-weight: 900;
+}
+
+.main-color{
+    background-color: var(--main-color) !important;
+}
